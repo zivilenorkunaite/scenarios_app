@@ -1,0 +1,20 @@
+command:
+  - "gunicorn"
+  - "server.main:app"
+  - "-w"
+  - "2"
+  - "-b"
+  - "127.0.0.1:8000"
+  - "--worker-class"
+  - "uvicorn.workers.UvicornWorker"
+ 
+
+env:
+  - name: "DATABRICKS_WAREHOUSE_ID"
+    valueFrom: "DATABRICKS_WAREHOUSE_ID"
+  - name: "HTTP_PATH"
+    valueFrom: "HTTP_PATH"
+  - name: "DATABRICKS_TOKEN"
+    valueFrom: "DATABRICKS_TOKEN"
+  - name: "DATABRICKS_JOB_ID"
+    valueFrom: "DATABRICKS_JOB_ID"
