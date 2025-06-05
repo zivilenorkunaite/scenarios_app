@@ -1,6 +1,6 @@
 command:
   - "gunicorn"
-  - "server.main:app"
+  - "server.app:app"
   - "-w"
   - "2"
   - "-b"

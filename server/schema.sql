@@ -1,4 +1,5 @@
-CREATE TABLE IF NOT EXISTS zivile_demo.app.scenario_runs (
+-- DEV run, replace table on changes
+CREATE or replace table zivile_demo.app.scenario_runs (
   scenario_id STRING PRIMARY KEY,
   input1 STRING,
   input2 STRING,
@@ -6,7 +7,9 @@ CREATE TABLE IF NOT EXISTS zivile_demo.app.scenario_runs (
   param1 DOUBLE,
   param2 DOUBLE,
   created_at TIMESTAMP,
-  inputs_kept BOOL
+  inputs_kept BOOLEAN,
+  scenario_description string,
+  inputComments string
 )
 USING DELTA;
 

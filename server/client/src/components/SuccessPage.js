@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography, Stack, Button, Box } from '@mui/material';
 
-export default function SuccessPage({ scenarioId, handleNewRun, handleViewRuns, jobRunId, keepInputs }) {
+export default function SuccessPage({ scenarioId, handleNewRun, handleViewHistoricalRuns, jobRunId, keepInputs }) {
   return (
     <Box
       sx={{
@@ -44,7 +44,7 @@ export default function SuccessPage({ scenarioId, handleNewRun, handleViewRuns, 
               }}>
               Submit New Run
             </Button>
-            <Button variant="outlined" color="secondary" onClick={handleViewRuns}
+            <Button variant="outlined" color="secondary" onClick={handleViewHistoricalRuns}
               sx={{
                 px: 4, py: 1.5, fontWeight: 600, fontSize: 18,
                 borderRadius: 3, boxShadow: 3, textTransform: 'none'
